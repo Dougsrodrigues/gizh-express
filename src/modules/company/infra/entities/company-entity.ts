@@ -8,9 +8,6 @@ import {
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
-import { UserEntity } from '../../../accounts/infra/entities/user.entity';
-import { UserTokensEntity } from '../../../auth/infra/entities/user-token-entity';
-
 @Entity({ name: 'company' })
 export class CompanyEntity {
   @PrimaryColumn()
@@ -18,12 +15,6 @@ export class CompanyEntity {
 
   @Column()
   user_id: string;
-
-  @OneToOne(() => UserTokensEntity, {
-    nullable: false,
-  })
-  @JoinColumn({ name: 'user_id' })
-  user: UserEntity;
 
   @Column()
   social_reason: string;
