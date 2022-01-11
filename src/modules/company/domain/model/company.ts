@@ -1,5 +1,7 @@
 export class Company {
-  socialReason: string;
+  social_reason: string;
+
+  user_id: string;
 
   cnpj: string;
 
@@ -9,7 +11,7 @@ export class Company {
 
   phone: string;
 
-  secundaryPhone: string;
+  secundary_phone: string;
 
   cep: string;
 
@@ -27,7 +29,7 @@ export class Company {
 
   openedAt: Date;
 
-  numberOfEmployees: number;
+  number_of_employees: number;
 
   logo: string;
 }

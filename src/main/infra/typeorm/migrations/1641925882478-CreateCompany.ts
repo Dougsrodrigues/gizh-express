@@ -16,7 +16,7 @@ export class CreateCompany1641925882478 implements MigrationInterface {
             type: 'uuid',
           },
           {
-            name: 'socialReason',
+            name: 'social_reason',
             type: 'varchar',
           },
           {
@@ -37,7 +37,7 @@ export class CreateCompany1641925882478 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'secundaryPhone',
+            name: 'secundary_phone',
             type: 'varchar',
           },
           {
@@ -73,7 +73,7 @@ export class CreateCompany1641925882478 implements MigrationInterface {
             type: 'timestamp',
           },
           {
-            name: 'numberOfEmployees',
+            name: 'number_of_employees',
             type: 'numeric',
           },
           {

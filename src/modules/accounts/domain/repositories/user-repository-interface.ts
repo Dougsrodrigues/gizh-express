@@ -4,4 +4,5 @@ import { User } from '../model/user';
 export interface IUserRepository {
   create(user: CreateUserDTO): Promise<void>;
   findByEmail(email: string): Promise<User>;
+  findById(id: string): Promise<User>;
 }

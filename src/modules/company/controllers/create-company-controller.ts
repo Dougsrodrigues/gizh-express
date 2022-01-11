@@ -11,6 +11,8 @@ export class CreateCompanyController {
 
     await createCompanyUseCase.execute(company);
 
-    return response.status(201).send();
+    return response
+      .status(200)
+      .json({ message: 'Empresa registrada com sucesso!' });
   }
 }

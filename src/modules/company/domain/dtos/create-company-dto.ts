@@ -1,6 +1,8 @@
 export class ICreateCompanyDTO {
   socialReason: string;
 
+  user_id: string;
+
   cnpj: string;
 
   email: string;
