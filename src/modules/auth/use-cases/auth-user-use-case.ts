@@ -35,13 +35,13 @@ export class AuthUserUseCase {
     const user = await this.userRepository.findByEmail(email);
 
     if (!user) {
-      throw new AppError('Email ou senha incorretos', 401);
+      throw new AppError('Email ou senha incorretos');
     }
 
     const isPasswordEqual = await compare(password, user.password);
 
     if (!isPasswordEqual) {
-      throw new AppError('Email ou senha incorretos', 401);
+      throw new AppError('Email ou senha incorretos');
     }
 
     const token = sign({}, process.env.SECRET_TOKEN_JWT, {
