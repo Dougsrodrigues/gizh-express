@@ -1,0 +1,15 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "username": "docker",
+  "password": "gizh",
+  "database": "gizh_postgress",
+  "entities": [
+    "./src/modules/**/infra/entities/*.ts"
+  ],
+  "port": 5432,
+  "migrations": ["./src/main/infra/typeorm/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/main/infra/typeorm/migrations"
+  }
+}
