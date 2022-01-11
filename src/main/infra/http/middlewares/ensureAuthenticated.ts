@@ -41,6 +41,6 @@ export async function ensureAuthenticated(
 
     next();
   } catch (error) {
-    throw new AppError('Invalid token', 401);
+    throw new AppError('Token inválido!', 401);
   }
 }
