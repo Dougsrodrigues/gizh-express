@@ -24,7 +24,7 @@ export class CompanyEntity {
   user: UserEntity;
 
   @Column()
-  socialReason: string;
+  social_reason: string;
 
   @Column()
   cnpj: string;
@@ -39,7 +39,7 @@ export class CompanyEntity {
   phone: string;
 
   @Column()
-  secundaryPhone: string;
+  secundary_phone: string;
 
   @Column()
   cep: string;
@@ -66,7 +66,7 @@ export class CompanyEntity {
   openedAt: Date;
 
   @Column()
-  numberOfEmployees: number;
+  number_of_employees: number;
 
   @Column()
   logo: string;
