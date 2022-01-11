@@ -1,10 +1,27 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryColumn,
+} from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
+
+import { UserEntity } from '../../../accounts/infra/entities/user.entity';
+import { UserTokensEntity } from '../../../auth/infra/entities/user-token-entity';
 
 @Entity({ name: 'company' })
 export class CompanyEntity {
   @PrimaryColumn()
   id: string;
+
+  @Column()
+  user_id: string;
+
+  @OneToOne(() => UserTokensEntity)
+  @JoinColumn({ name: 'user_id' })
+  user: UserEntity;
 
   @Column()
   socialReason: string;

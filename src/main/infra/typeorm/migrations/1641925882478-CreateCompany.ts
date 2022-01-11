@@ -12,6 +12,10 @@ export class CreateCompany1641925882478 implements MigrationInterface {
             isPrimary: true,
           },
           {
+            name: 'user_id',
+            type: 'uuid',
+          },
+          {
             name: 'socialReason',
             type: 'varchar',
           },
@@ -80,6 +84,16 @@ export class CreateCompany1641925882478 implements MigrationInterface {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()',
+          },
+        ],
+        foreignKeys: [
+          {
+            name: 'FKCompanyUser',
+            referencedTableName: 'user',
+            referencedColumnNames: ['id'],
+            columnNames: ['user_id'],
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE',
           },
         ],
       }),
