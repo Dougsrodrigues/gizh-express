@@ -19,7 +19,9 @@ export class CompanyEntity {
   @Column()
   user_id: string;
 
-  @OneToOne(() => UserTokensEntity)
+  @OneToOne(() => UserTokensEntity, {
+    nullable: false,
+  })
   @JoinColumn({ name: 'user_id' })
   user: UserEntity;
 
@@ -73,6 +75,9 @@ export class CompanyEntity {
 
   @CreateDateColumn()
   created_at: Date;
+
+  @CreateDateColumn()
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {
